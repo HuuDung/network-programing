@@ -1,0 +1,12 @@
+CFLAGS = -c -Wall
+CC = gcc
+LIBS =  -lm 
+
+all: main
+
+main: main.o
+	${CC} -o main  main.o
+main.o: hello.c
+	${CC} -c main.c
+clean:
+	rm -f *.o *~
